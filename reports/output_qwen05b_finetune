@@ -1,0 +1,123 @@
+Démarrage de l'évaluation...
+============================================================
+Évaluation du modèle finetuné
+============================================================
+
+Chargement du modèle depuis outputs/qwen2_5_7b_nli_lora...
+✓ Modèle chargé
+
+Chargement des données de test depuis NLI4CT/Gold_test_formatted.jsonl...
+Nombre d'exemples de test : 500
+
+Génération des prédictions...
+  Traité 50/500 exemples...
+  Traité 100/500 exemples...
+  Traité 150/500 exemples...
+  Traité 200/500 exemples...
+  Traité 250/500 exemples...
+  Traité 300/500 exemples...
+  Traité 350/500 exemples...
+  Traité 400/500 exemples...
+  Traité 450/500 exemples...
+  Traité 500/500 exemples...
+✓ 500 prédictions générées
+
+--- Exemples de générations brutes sur TEST (premiers 5) ---
+
+Exemple 1:
+  Vrai label: Contradiction
+  Génération brute: 'Entailment'
+  Label extrait: Entailment
+
+Exemple 2:
+  Vrai label: Entailment
+  Génération brute: 'Entailment'
+  Label extrait: Entailment
+
+Exemple 3:
+  Vrai label: Entailment
+  Génération brute: 'Entailment'
+  Label extrait: Entailment
+
+Exemple 4:
+  Vrai label: Entailment
+  Génération brute: 'Entailment'
+  Label extrait: Entailment
+
+Exemple 5:
+  Vrai label: Contradiction
+  Génération brute: 'Contradiction'
+  Label extrait: Contradiction
+
+--- Test sur 10 exemples du TRAIN (pour vérifier l'apprentissage) ---
+  Exemple train 1: Vrai=Contradiction, Prédit=Entailment, Correct=False
+  Exemple train 2: Vrai=Contradiction, Prédit=Contradiction, Correct=True
+  Exemple train 3: Vrai=Entailment, Prédit=Entailment, Correct=True
+  Exemple train 4: Vrai=Contradiction, Prédit=Contradiction, Correct=True
+  Exemple train 5: Vrai=Contradiction, Prédit=Contradiction, Correct=True
+  Exemple train 6: Vrai=Contradiction, Prédit=Entailment, Correct=False
+  Exemple train 7: Vrai=Contradiction, Prédit=Entailment, Correct=False
+  Exemple train 8: Vrai=Contradiction, Prédit=Contradiction, Correct=True
+  Exemple train 9: Vrai=Entailment, Prédit=Entailment, Correct=True
+  Exemple train 10: Vrai=Contradiction, Prédit=Contradiction, Correct=True
+  Accuracy sur train (échantillon): 7/10 = 70.0%
+
+============================================================
+RÉSULTATS
+============================================================
+
+Accuracy: 0.6360 (63.60%)
+Precision (weighted): 0.6455
+Recall (weighted): 0.6360
+F1-score (weighted): 0.6403
+
+--- Métriques par classe ---
+
+Entailment:
+  Precision: 0.6371
+  Recall: 0.6600
+  F1-score: 0.6483
+  Support: 250
+
+Contradiction:
+  Precision: 0.6538
+  Recall: 0.6120
+  F1-score: 0.6322
+  Support: 250
+
+--- Matrice de confusion ---
+                Prédit:
+              Entailment  Contradiction
+Entailment         165          81
+Contradiction       94         153
+
+--- Distribution des prédictions ---
+Prédictions: {'Entailment': 259, 'Contradiction': 234, '60-90%) Exclusion Criteria: Subjects who are pregnant or nursing. Subjects who have previously received radiotherapy for their breast cancer. Subjects who have received previous chemotherapy for their breast cancer. Subjects who have undergone a': 2, 'osphonates for osteoporosis prevention are excluded from this protocol due to potential harm to the patient from the bisphosphonate when administered with calcium channel-blockers Hypertension Diabetes mellitus History of hypersensitivity': 2, ') History of stage I or II breast cancer (T1-T2, N0-N2, M0), with at least one intact axillary lymph node (N1) or one or more missing axillary lymph nodes (N0-N': 2, 'trastuzumab emtansine (Herceptin®) or lapatinib and follow-up with laboratory and/or biopsy Progressive disease (PD): Participants with PD will be enrolled regardless of the sequence of the other criteria': 1}
+Vraies labels: {'Contradiction': 250, 'Entailment': 250}
+
+--- Exemples d'erreurs (premiers 5) ---
+
+Exemple 1:
+  Vrai label: Contradiction
+  Prédit: Entailment
+
+Exemple 7:
+  Vrai label: Contradiction
+  Prédit: Entailment
+
+Exemple 8:
+  Vrai label: Contradiction
+  Prédit: Entailment
+
+Exemple 16:
+  Vrai label: Contradiction
+  Prédit: Entailment
+
+Exemple 17:
+  Vrai label: Entailment
+  Prédit: Contradiction
+
+============================================================
+Évaluation terminée
+============================================================
+Fin de l'évaluation.
