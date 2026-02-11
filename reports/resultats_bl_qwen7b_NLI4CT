@@ -1,0 +1,33 @@
+Démarrage de l'évaluation...
+Base: /mnt/beegfs/home/kebdi/ftctinfer/model/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28
+Eval: /mnt/beegfs/home/kebdi/ftctinfer/model/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28
+============================================================
+BASE MODEL : a09a35458c702b33eeacc393d103063234e8bc28
+EVAL TARGET: a09a35458c702b33eeacc393d103063234e8bc28
+============================================================
+Chargement du modèle de base...
+✅ Mode Baseline : Aucune fusion d'adapters nécessaire.
+
+Inférence sur 500 exemples...
+  Progrès : 50/500
+  Progrès : 100/500
+  Progrès : 150/500
+  Progrès : 200/500
+  Progrès : 250/500
+  Progrès : 300/500
+  Progrès : 350/500
+  Progrès : 400/500
+  Progrès : 450/500
+  Progrès : 500/500
+
+==============================
+ACCURACY : 0.6580 (65.80%)
+F1-SCORE : 0.6434
+==============================
+
+--- Matrice de Confusion ---
+                Prédit Entailment | Prédit Contradiction
+Vrai Entail.  :               107 |                139
+Vrai Contrad. :                25 |                222
+============================================================
+Fin du job.
