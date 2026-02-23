@@ -1,0 +1,37 @@
+Démarrage de l'évaluation...
+Base: /mnt/beegfs/home/kebdi/ftctinfer/model/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28
+Eval: /mnt/beegfs/home/kebdi/ftctinfer/NLI4CT/outputs/qwen2_5_7b_finetuned_v2
+Job ID: 863969
+============================================================
+BASE MODEL : a09a35458c702b33eeacc393d103063234e8bc28
+EVAL TARGET: qwen2_5_7b_finetuned_v2
+============================================================
+Chargement du modèle de base...
+🔄 Détection d'adapters LoRA. Fusion depuis : /mnt/beegfs/home/kebdi/ftctinfer/NLI4CT/outputs/qwen2_5_7b_finetuned_v2
+
+Inférence sur 500 exemples...
+  Progrès : 50/500
+  Progrès : 100/500
+  Progrès : 150/500
+  Progrès : 200/500
+  Progrès : 250/500
+  Progrès : 300/500
+  Progrès : 350/500
+  Progrès : 400/500
+  Progrès : 450/500
+  Progrès : 500/500
+
+💾 Sauvegarde des prédictions dans : /mnt/beegfs/projects/ftctinfer/NLI4CT/logs_evaluate/predictions_qwen2_5_7b_finetuned_v2_job863969.csv
+✓ 500 prédictions sauvegardées
+
+==============================
+ACCURACY : 0.7420 (74.20%)
+F1-SCORE : 0.7469
+==============================
+
+--- Matrice de Confusion ---
+                Prédit Entailment | Prédit Contradiction
+Vrai Entail.  :               195 |                 51
+Vrai Contrad. :                71 |                176
+============================================================
+Fin du job.
